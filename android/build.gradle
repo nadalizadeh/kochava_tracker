@@ -29,6 +29,7 @@ rootProject.allprojects {
 }
 
 android {
+    namespace 'com.kochava.kochava_tracker'
     compileSdkVersion 31
 
     sourceSets {
