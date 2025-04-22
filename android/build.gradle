@@ -35,9 +35,20 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = rootProject.ext.javaVersion.toString()
+    }
+
     defaultConfig {
         minSdkVersion 16
     }
+    
     lintOptions {
         disable 'InvalidPackage'
     }
